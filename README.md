@@ -1,128 +1,190 @@
-<a href="https://next-saas-stripe-starter.vercel.app">
-  <img alt="SaaS Starter" src="public/_static/og.jpg">
-  <h1 align="center">Next SaaS Stripe Starter</h1>
-</a>
+# 🚀 SNTL 84 — Next.js SaaS Starter
 
-<p align="center">
-  Start at full speed with SaaS Starter !
-</p>
+> **Automate What's Costing You Money**  
+> A production-ready SaaS foundation built with Next.js 14, Stripe, Prisma, and Auth.js.
 
-<p align="center">
-  <a href="https://twitter.com/miickasmt">
-    <img src="https://img.shields.io/twitter/follow/miickasmt?style=flat&label=miickasmt&logo=twitter&color=0bf&logoColor=fff" alt="Mickasmt Twitter follower count" />
-  </a>
-</p>
+---
 
-<p align="center">
-  <a href="#introduction"><strong>Introduction</strong></a> ·
-  <a href="#installation"><strong>Installation</strong></a> ·
-  <a href="#tech-stack--features"><strong>Tech Stack + Features</strong></a> ·
-  <a href="#author"><strong>Author</strong></a> ·
-  <a href="#credits"><strong>Credits</strong></a>
-</p>
-<br/>
+## 📦 What This Is
 
-## Introduction
+This is a **private fork** of the popular [next-saas-stripe-starter](https://github.com/mickasmt/next-saas-stripe-starter) by @mickasmt, customized for rapid deployment by **SNTL 84** (Milan · Surat, India).
 
-Empower your next project with the stack of Next.js 14, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, and Stripe.
-<br/>
-All seamlessly integrated with the SaaS Starter to accelerate your development and saas journey.
+Use this as your launchpad for subscription-based products, SaaS tools, and revenue-generating web applications.
 
-## Installation
+---
 
-Clone & create this repo locally with the following command:
+## ⚡ Quick Start
+
+### 1. Clone & Install
 
 ```bash
-npx create-next-app my-saas-project --example "https://github.com/mickasmt/next-saas-stripe-starter"
-```
-
-Or, deploy with Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmickasmt%2Fnext-saas-stripe-starter)
-
-### Steps
-
-1. Install dependencies using pnpm:
-
-```sh
+git clone https://github.com/SNTL84/sntl84-next-saas-stripe-starter.git
+cd sntl84-next-saas-stripe-starter
 pnpm install
 ```
 
-2. Copy `.env.example` to `.env.local` and update the variables.
+### 2. Environment Setup
 
-```sh
+```bash
 cp .env.example .env.local
 ```
 
-3. Start the development server:
+Configure your environment variables:
 
-```sh
-pnpm run dev
+| Variable | Description |
+|----------|-------------|
+| `NEXTAUTH_URL` | Your app URL (http://localhost:3000 for dev) |
+| `NEXTAUTH_SECRET` | Random secret for JWT encryption |
+| `DATABASE_URL` | Neon/PostgreSQL connection string |
+| `STRIPE_SECRET_KEY` | Your Stripe secret key |
+| `STRIPE_WEBHOOK_SECRET` | Stripe webhook endpoint secret |
+| `RESEND_API_KEY` | Resend email API key |
+
+##3 3. Database Setup
+
+```bash
+npx prisma db push
 ```
 
-> [!NOTE]  
-> I use [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) package for update this project.
->
-> Use this command for update your project: `ncu -i --format group`
+### 4. Run Development
 
-## Roadmap
-- [ ] Upgrade eslint to v9
-- [ ] Add resend for success subscriptions
+```bash
+pnpm dev
+```
 
-## Tech Stack + Features
+---
 
-https://github.com/mickasmt/next-saas-stripe-starter/assets/62285783/828a4e0f-30e3-4cfe-96ff-4dfd9cd55124
+## 🛠️ Tech Stack
 
-### Frameworks
+| Technology | Purpose |
+|------------|---------|
+| **Next.js 14** | React framework with App Router |
+| **TypeScript** | Type-safe development |
+| **Auth.js v5** | Authentication (Google, GitHub, Email) |
+| **Prisma** | Database ORM |
+| **Neon** | Serverless PostgreSQL |
+| **Stripe** | Payments & subscriptions |
+| **Resend** | Transactional emails |
+| **React Email** | Email templates |
+| **Shadcn/ui** | UI component library |
+| **Tailwind CSS** | Utility-first styling |
 
-- [Next.js](https://nextjs.org/) – React framework for building performant apps with the best developer experience
-- [Auth.js](https://authjs.dev/) – Handle user authentication with ease with providers like Google, Twitter, GitHub, etc.
-- [Prisma](https://www.prisma.io/) – Typescript-first ORM for Node.js
-- [React Email](https://react.email/) – Versatile email framework for efficient and flexible email development
+---
 
-### Platforms
+## 🎯 Features Included
 
-- [Vercel](https://vercel.com/) – Easily preview & deploy changes with git
-- [Resend](https://resend.com/) – A powerful email framework for streamlined email development
-- [Neon](https://neon.tech/) – Serverless Postgres with autoscaling, branching, bottomless storage and generous free tier.
+- ✅ **Authentication** — OAuth (Google, GitHub) + Email magic links
+- ✅ **Role-based Access** — User & Admin roles
+- ✅ **Subscription Management** — Stripe Checkout + Customer Portal
+- ✅ **Admin Dashboard** — Manage users, subscriptions, content
+- ✅ **Email System** — Welcome emails, notifications
+- ✅ **Dark Mode** — Toggle between light/dark themes
+- ✅ **Type-safe** — Full TypeScript coverage
+- ✅ **Server Actions** — Next.js 14 app router native
 
-### UI
+---
 
-- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for rapid UI development
-- [Shadcn/ui](https://ui.shadcn.com/) – Re-usable components built using Radix UI and Tailwind CSS
-- [Framer Motion](https://framer.com/motion) – Motion library for React to animate components with ease
-- [Lucide](https://lucide.dev/) – Beautifully simple, pixel-perfect icons
-- [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) – Optimize custom fonts and remove external network requests for improved performance
-- [`ImageResponse`](https://nextjs.org/docs/app/api-reference/functions/image-response) – Generate dynamic Open Graph images at the edge
+## 🚀 Deployment
 
-### Hooks and Utilities
+### Vercel (Recommended)
 
-- `useIntersectionObserver` – React hook to observe when an element enters or leaves the viewport
-- `useLocalStorage` – Persist data in the browser's local storage
-- `useScroll` – React hook to observe scroll position ([example](https://github.com/mickasmt/precedent/blob/main/components/layout/navbar.tsx#L12))
-- `nFormatter` – Format numbers with suffixes like `1.2k` or `1.2M`
-- `capitalize` – Capitalize the first letter of a string
-- `truncate` – Truncate a string to a specified length
-- [`use-debounce`](https://www.npmjs.com/package/use-debounce) – Debounce a function call / state update
+1. Push to GitHub
+2. Import project on [Vercel](https://vercel.com)
+3. Add environment variables
+4. Deploy
 
-### Code Quality
+```bash
+vercel --prod
+```
 
-- [TypeScript](https://www.typescriptlang.org/) – Static type checker for end-to-end typesafety
-- [Prettier](https://prettier.io/) – Opinionated code formatter for consistent code style
-- [ESLint](https://eslint.org/) – Pluggable linter for Next.js and TypeScript
+---
 
-### Miscellaneous
+## 🏗️ Project Structure
 
-- [Vercel Analytics](https://vercel.com/analytics) – Track unique visitors, pageviews, and more in a privacy-friendly way
+```
+├── app/                 # Next.js App Router
+│   ├── (auth)/         # Authentication routes
+│   ├── (dashboard)/    # Protected user dashboard
+│   ├── (marketing)/    # Landing pages
+│   └── api/            # API routes & webhooks
+├── components/          # React components
+├── lib/                # Utilities, auth, db
+├── prisma/             # Database schema
+├── emails/             # React Email templates
+└── public/             # Static assets
+```
 
-## Author
+---
 
-Created by [@miickasmt](https://twitter.com/miickasmt) in 2023, released under the [MIT license](https://github.com/shadcn/taxonomy/blob/main/LICENSE.md).
+## 🔐 Security Checklist
 
-## Credits
+Before going live:
 
-This project was inspired by shadcn's [Taxonomy](https://github.com/shadcn-ui/taxonomy), Steven Tey’s [Precedent](https://github.com/steven-tey/precedent), and Antonio Erdeljac's [Next 13 AI SaaS](https://github.com/AntonioErdeljac/next13-ai-saas).
+- [ ] Update `NEXTAUTH_SECRET` to a strong random string
+- [ ] Configure Stripe webhook endpoints
+- [ ] Set up production database
+- [ ] Enable Stripe test mode first
+- [ ] Verify email sending works (Resend)
+- [ ] Review CORS settings
+- [ ] Add rate limiting
 
-- Shadcn ([@shadcn](https://twitter.com/shadcn))
-- Steven Tey ([@steventey](https://twitter.com/steventey))
-- Antonio Erdeljac ([@YTCodeAntonio](https://twitter.com/AntonioErdeljac))
+---
+
+## 📝 Customization
+
+### Branding
+
+Update these files with your brand:
+
+- `app/layout.tsx` — Metadata, title, description
+- `app/(marketing)/page.tsx` — Landing page content
+- `components/brand-logo.tsx` — Logo component
+- `lib/config/site.ts` — Site configuration
+- `emails/` — Email templates
+
+### Pricing
+
+Edit subscription plans in:
+
+- `lib/config/subscriptions.ts` — Plan definitions
+- Stripe Dashboard — Plan & price management
+
+---
+
+## 📚 Documentation
+
+- [Next.js Docs](https://nextjs.org/docs)
+- [Auth.js Docs](https://authjs.dev/)
+- [Prisma Docs](https://www.prisma.io/docs)
+- [Stripe Docs](https://stripe.com/docs)
+- [Shadcn/ui Docs](https://ui.shadcn.com/)
+
+---
+
+## 🤝 Credits
+
+Original starter by [@mickasmt](https://github.com/mickasmt/next-saas-stripe-starter).
+
+Modified and maintained by **SNTL 84** — Milan, AI Workflow Developer, Surat, India.
+
+---
+
+## 📞 Contact & Support
+
+| Platform | Link |
+|----------|------|
+| 🌐 Website | [desidevloper.com](https://desidevloper.com) |
+| 💬 WhatsApp | [+91 97274 13309](https://wa.me/919727413309) |
+| 💼 LinkedIn | [linkedin.com/in/sntl2784](https://linkedin.com/in/sntl2784) |
+| 🐙 GitHub | [github.com/SNTL84](https://github.com/SNTL84) |
+
+---
+
+> **I Automate What's Costing You Money.**  
+> Let me help you ship faster. Reach out for custom SaaS development, AI integrations, and workflow automation.
+
+---
+
+## 📄 License
+
+MIT License — Fork of [mickasmt/next-saas-stripe-starter](https://github.com/mickasmt/next-saas-stripe-starter).
